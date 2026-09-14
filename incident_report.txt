@@ -1,0 +1,37 @@
+SOC LOG INVESTIGATION REPORT
+
+Date: September 14
+Environment: Kali Linux
+Log Source: investigation.log
+
+SUMMARY
+Performed a security log investigation to identify and correlate
+potentially suspicious Linux system activity.
+
+FINDINGS
+- Identified 5 events containing the keyword "failed".
+- Identified 3 login-related events.
+- Identified 18 session-related events.
+- Identified 0 SSH events.
+- Identified 0 sudo events.
+- Identified 0 authentication-related events.
+- Four failed events and three login-related events occurred at 13:00:47.
+- Session activity was observed throughout the investigation period.
+
+ANALYSIS
+Event correlation identified a cluster of failed, login, and session
+activity around 13:00:47. Additional searches did not identify SSH,
+sudo, or explicit authentication-related activity.
+
+ASSESSMENT
+The reviewed evidence does not provide sufficient indicators to
+classify the activity as a confirmed security incident. Additional
+log sources would be required for further investigation.
+
+TECHNIQUES USED
+- Linux log analysis
+- grep filtering
+- Keyword searching
+- Event counting
+- Timestamp correlation
+- Security event triage
