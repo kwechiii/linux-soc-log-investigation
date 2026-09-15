@@ -1,56 +1,20 @@
-# Linux SOC Log Investigation
+## Investigation Screenshots
 
-## Overview
-This project demonstrates a basic SOC investigation using Linux command-line
-tools to identify, filter, correlate, and assess potentially suspicious
-system events.
+### 1. Failed Event Detection
 
-## Objectives
-- Analyze Linux system logs for suspicious activity
-- Identify failed and login-related events
-- Correlate events using timestamps
-- Perform basic security event triage
-- Document investigation findings
+Filtered the investigation log to identify failed system events. Multiple failed events occurring at the same timestamp were identified for further investigation.
 
-## Tools Used
-- Kali Linux
-- Linux CLI
-- grep
-- cut
-- sort
-- uniq
-- nano
+![Failed Event Detection](screenshots/01-failed-event-detection.png)
 
-## Investigation
+### 2. Timestamp Correlation
 
-Initial analysis identified:
+Aggregated session-related events by timestamp using Linux command-line tools to identify activity patterns during the investigation window.
 
-- 5 events containing "failed"
-- 3 login-related events
-- 18 session-related events
-- 0 SSH events
-- 0 sudo events
-- 0 explicit authentication-related events
+![Timestamp Correlation](screenshots/02-timestamp-correlation.png)
 
-Four failed events and three login-related events occurred around 13:00:47,
-making this timestamp the primary event cluster investigated.
+### 3. SOC Investigation Report
 
-Further correlation of session activity showed multiple system sessions
-throughout the investigation period.
+Documented the investigation findings and analysis after correlating failed, login, and session-related activity.
 
-## Assessment
-
-The reviewed evidence did not provide sufficient indicators to classify the
-activity as a confirmed security incident.
-
-The investigation demonstrated the importance of correlating multiple log
-events instead of treating individual keywords such as "failed" as proof of
-malicious activity.
-
-## Skills Demonstrated
-- Linux log analysis
-- SOC event triage
-- Event correlation
-- Timestamp analysis
-- Command-line log filtering
+![SOC Investigation Report](screenshots/03-soc-investigation-report.png)
 - Incident documentation
